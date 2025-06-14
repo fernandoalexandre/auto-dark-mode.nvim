@@ -23,7 +23,7 @@ local function validate_options(options)
 		"fallback",
 		options.fallback,
 		"boolean",
-		vim.tbl_contains({ "dark", "light" }, options),
+		vim.tbl_contains({ "dark", "light" }, options.fallback),
 		"`fallback` to be either 'light' or 'dark'"
 	)
 	vim.validate("set_dark_mode", options.set_dark_mode, "function")
